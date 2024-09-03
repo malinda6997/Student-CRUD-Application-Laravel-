@@ -11,30 +11,26 @@
 
 <body>
     <div class="container mt-4">
-        <h1 class="fw-bold">Create Student</h1>
-        <form class="mt-4">
+        <h2 class="fw-bold">Create Student</h2>
+
+        <form class="mt-4" method="POST" action="{{ url('students/create') }}">
+            @csrf
             <div class="mb-3">
                 <label for="inputName" class="form-label">Full Name</label>
-                <input type="email" name="name" class="form-control" id="inputName">
+                <input type="text" name="name" class="form-control" id="inputName">
             </div>
             <div class="mb-3">
-                <label for="InputEmail1" class="form-label">Email Address</label>
-                <input type="text" name="email" class="form-control" id="InputEmail1">
+                <label for="InputEmail" class="form-label">Email Address</label>
+                <input type="email" name="email" class="form-control" id="InputEmail">
             </div>
             <div class="mb-3">
                 <label for="InputMobile" class="form-label">Mobile Number</label>
                 <input type="text" name="mobile" class="form-control" id="InputMobile">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Save</button>
         </form>
     </div>
-
-
-
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
