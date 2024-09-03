@@ -9,7 +9,9 @@ class StudentController extends Controller
 {
     public function index()
     {
-        return view('students');
+        $students = Student::all();
+        return view('students.index',compact('students'));
+        //return view('students.index',['students' => $students]);
     }
 
     public function create()
@@ -25,6 +27,8 @@ class StudentController extends Controller
         $student->email = $request->email;
         $student->phone = $request->mobile;
         $student->save();
+
+        return redirect('/students');
     }
 
    
