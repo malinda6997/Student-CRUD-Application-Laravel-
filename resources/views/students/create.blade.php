@@ -12,7 +12,7 @@
 <body>
     <div class="container mt-4">
         <h2 class="fw-bold">Create Student</h2>
-        <a class="btn btn-primary btn-sm" href="{{ url('students') }}">Go to home</a>
+        <a class="btn btn-primary " href="{{ url('students') }}">Go to home</a>
 
         <form class="mt-4" method="POST" action="{{ url('students/create') }}">
             @csrf

@@ -13,7 +13,7 @@
     <div class="container mt-4">
         <h2 class="mt-4 fw-bold">List of all Students</h2>
 
-        <a class="btn btn-primary btn-sm" href="{{ url('students/create') }}">Add New Student</a>
+        <a class="btn btn-primary " href="{{ url('students/create') }}">Add New Student</a>
 
         <table class="table table-hover mt-4">
             <thead>
@@ -33,8 +33,8 @@
                         <td>{{ $student->email }}</td>
                         <td>{{ $student->phone }}</td>
                         <td>
-                            <button type="button" class="btn btn-primary">Edite</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
+                            <button type="button" class="btn btn-primary btn-sm">Edite</button>
+                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
 
                         </td>
                     </tr>
