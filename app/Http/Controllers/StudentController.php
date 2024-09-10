@@ -28,7 +28,7 @@ class StudentController extends Controller
         $student->phone = $request->mobile;
         $student->save();
 
-        return redirect('/students');
+        return redirect('/students')->with('mgs',"Record Added Successfully");
     }
 
    

@@ -15,6 +15,12 @@
 
         <a class="btn btn-primary " href="{{ url('students/create') }}">Add New Student</a>
 
+        @if (@Session::has('mgs'))
+            <div class="alert alert-success mt-4" role="alert">
+                Record Added Successfully
+            </div>
+        @endif
+
         <table class="table table-hover mt-4">
             <thead>
                 <tr>
