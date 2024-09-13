@@ -39,7 +39,8 @@
                         <td>{{ $student->email }}</td>
                         <td>{{ $student->phone }}</td>
                         <td>
-                            <button type="button" class="btn btn-primary btn-sm">Edite</button>
+                            <a href="{{ url('/students/edite/' . $student->id) }}"
+                                class="btn btn-primary btn-sm">Edite</a>
                             <button type="button" class="btn btn-danger btn-sm">Delete</button>
 
                         </td>

@@ -10,5 +10,9 @@ Route::get('/', function () {
 
 // Correct way to define the route
 Route::get('/students', [StudentController::class, 'index']);
+
 Route::get('/students/create', [StudentController::class, 'create']);
 Route::post('/students/create', [StudentController::class, 'store']);
+
+Route::get('/students/edite/{id}', [StudentController::class, 'edite']);
+Route::put('/students/edite/{id}', [StudentController::class, 'update']);
