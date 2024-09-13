@@ -13,11 +13,11 @@
     <div class="container mt-4">
         <h2 class="mt-4 fw-bold">List of all Students</h2>
 
-        <a class="btn btn-primary " href="{{ url('students/create') }}">Add New Student</a>
+        <a class="btn btn-primary mt-4 " href="{{ url('students/create') }}">Add New Student</a>
 
         @if (@Session::has('mgs'))
             <div class="alert alert-success mt-4" role="alert">
-                Record Added Successfully
+                {{ Session::get('mgs') }}
             </div>
         @endif
 

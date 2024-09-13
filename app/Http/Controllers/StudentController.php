@@ -21,6 +21,12 @@ class StudentController extends Controller
 
     public function Store(Request $request)
     {
+        $request->validate([
+    'name' => 'required|string|min:5|max:50', // Ensures name is a string between 5 to 50 characters
+    'email' => 'required|email',              // Ensures a valid email format
+    'mobile' => 'required|numeric|digits_between:10,15', // Ensures mobile is numeric and between 10 to 15 digits
+]);
+
         // dd($request->all());
         $student = new Student();
         $student->name = $request->name;
