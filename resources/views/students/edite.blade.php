@@ -36,7 +36,7 @@
             </div>
             <div class="mb-3">
                 <label for="InputMobile" class="form-label">Mobile Number</label>
-                <input type="text" value="{{ old('phone', $student->mobile) }}" name="mobile" class="form-control"
+                <input type="text" value="{{ old('mobile', $student->phone) }}" name="mobile" class="form-control"
                     id="InputMobile">
                 @error('mobile')
                     <p class="text-danger">{{ $message }}</p>
@@ -44,6 +44,7 @@
             </div>
 
             <button type="submit" class="btn btn-warning">Update</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
         </form>
     </div>
 
